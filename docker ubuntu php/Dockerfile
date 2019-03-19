@@ -19,6 +19,8 @@ ENV APACHE_PID_FILE /var/run/apache2.pid
 EXPOSE 80
 
 # update default apache site with config 
-# ADD apache-config.conf /etc/apache2/sites-enabled/000-default.conf
+ADD apache-config.conf /etc/apache2/sites-enabled/000-default.conf
+
+ADD app /var/www/site/app
 
 CMD ["apachectl", "-D", "FOREGROUND"]
