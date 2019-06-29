@@ -1,0 +1,9 @@
+version: '3.0'
+services:
+  # The Web Server
+  web:
+    image: hello12/demo_stack
+    deploy:
+      replicas: 4
+    ports:
+      - 8090:80
